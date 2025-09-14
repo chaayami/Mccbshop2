@@ -3,227 +3,643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="ช้อปปิ้งออนไลน์แบบมืออาชีพ! พบกับดีลสุดคุ้มและโปรโมชั่นเด็ดจาก Lazada, Shopee และ All Online ที่เราคัดสรรมาให้คุณครบ จบในที่เดียว">
-    <meta name="keywords" content="ดีลเด็ด, โปรโมชั่น, ช้อปปิ้งออนไลน์, สินค้าลดราคา, Shopee, Lazada, All Online, คุ้มค่า, ช้อปปิ้ง, ออนไลน์, แฟชั่น, อิเล็กทรอนิกส์, ความงาม">
-    <link rel="canonical" href="https://your-website.github.io/">
-
-    <title>ช้อปปิ้งแบบมืออาชีพ - ดีลสุดคุ้มจากทุกแพลตฟอร์ม</title>
+    <title>Shop Online - ดีลสุดคุ้ม</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
         body {
             font-family: 'Kanit', sans-serif;
-            background-color: #f8fafc; /* Lighter background */
+            background-color: #f0f4f8;
+            color: #1a202c;
         }
         .container-shadow {
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
         }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6366f1, #d946ef);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease;
-        }
-        .image-container:hover .image-overlay {
-            background: rgba(0, 0, 0, 0.4);
-        }
-        .slider-container {
-            position: relative;
-            overflow: hidden;
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
             border-radius: 0.75rem;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
         }
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        .product-card:hover {
+            transform: scale(1.03);
         }
-        .slide {
-            min-width: 100%;
-            flex-shrink: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .price {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #ef4444; /* Red color */
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #9ca3af; /* Gray color */
+            font-size: 0.875rem;
+        }
+        .discount {
+            color: #10b981; /* Green color */
+            font-weight: 600;
         }
     </style>
 </head>
-<body class="bg-gray-100 flex flex-col items-center min-h-screen">
+<body class="p-4 md:p-8">
 
     <!-- Header Section -->
-    <header class="w-full bg-white container-shadow pt-12 pb-8 mb-8 text-center rounded-b-3xl">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-gradient mb-4">Shoponline</h1>
-        <p class="text-lg md:text-xl text-gray-600 font-light">
-            One Click, All Shops - คุ้มค่าในทุกการช้อปปิ้ง
+    <header class="text-center mb-10 md:mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
+            Shop Online
+        </h1>
+        <p class="text-base md:text-lg text-gray-600 mt-2">
+            แหล่งรวมดีลและโปรโมชั่นสุดคุ้ม
         </p>
     </header>
 
     <!-- Main Content -->
-    <main class="w-full max-w-6xl px-4 pb-12">
-        <!-- Professional Ad Slogan -->
-        <section class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                "รวมดีลเด็ดที่คุณไม่ควรพลาด"
-            </h2>
-            <p class="text-lg text-gray-500 font-light max-w-2xl mx-auto">
-                เราคัดสรรโปรโมชั่นและสินค้าลดราคาจากทุกแพลตฟอร์มชั้นนำ เพื่อให้การช้อปปิ้งของคุณง่ายและประหยัดยิ่งขึ้น
-            </p>
-        </section>
-
-        <!-- Top Platforms Section -->
+    <main class="max-w-7xl mx-auto">
+        
+        <!-- Lazada Section -->
         <section class="mb-12">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
-                ช้อปเลย! แพลตฟอร์มที่คุณชื่นชอบ
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Lazada -->
-                <div class="bg-white rounded-lg p-6 container-shadow flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
-                    <img src="https://i.postimg.cc/br5nNVrP/lazada.jpg" alt="Lazada Logo" class="w-32 h-auto mb-4">
-                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Lazada</h4>
-                    <p class="text-gray-500 text-center text-sm">สินค้าหลากหลาย ครอบคลุมทุกความต้องการ</p>
-                    <a href="https://atth.me/00bgpi000aj2" target="_blank" class="mt-4 bg-orange-500 text-white font-bold py-2 px-6 rounded-full hover:bg-orange-600 transition-colors duration-200">
-                        ช้อปเลย
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
+                ดีลเด็ดจาก Lazada
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/c4FjGmqR/11.avif" alt="ไฟกลางคืน LED" class="w-full h-auto object-cover rounded-lg mb-4">
                     </a>
+                    <h3 class="text-base font-semibold mb-1">ไฟกลางคืน LED ดีไซน์แปลกใหม่</h3>
+                    <p class="text-gray-500 text-xs mb-2">ARGENTO.SHOP</p>
+                    <p class="text-gray-700 text-sm mb-2">สร้างบรรยากาศโรแมนติก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿73.47</span>
+                        <span class="original-price">฿141.29</span>
+                        <span class="discount">-48%</span>
+                    </div>
                 </div>
-
-                <!-- Shopee -->
-                <div class="bg-white rounded-lg p-6 container-shadow flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
-                    <img src="https://i.postimg.cc/ZqJWZzH3/shopee.png" alt="Shopee Logo" class="w-32 h-auto mb-4">
-                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Shopee</h4>
-                    <p class="text-gray-500 text-center text-sm">ดีลแฟลชเซลล์และโปรส่งฟรีสุดคุ้ม</p>
-                    <a href="https://atth.me/0041fn000aj2" target="_blank" class="mt-4 bg-purple-600 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700 transition-colors duration-200">
-                        ช้อปเลย
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/XqV2TZQ1/12.avif" alt="ไส้กรอกไก่ย่าง" class="w-full h-auto object-cover rounded-lg mb-4">
                     </a>
+                    <h3 class="text-base font-semibold mb-1">ไส้กรอกไก่ย่างข้าวเหนียว</h3>
+                    <p class="text-gray-500 text-xs mb-2">สินค้าขายดี</p>
+                    <p class="text-700 text-sm mb-2">อร่อยแปลกใหม่ สินค้าขายดี</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿95.00</span>
+                        <span class="original-price">฿100.00</span>
+                        <span class="discount">-5%</span>
+                    </div>
                 </div>
-
-                <!-- All Online -->
-                <div class="bg-white rounded-lg p-6 container-shadow flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
-                    <img src="https://i.postimg.cc/C11dBCWx/allonline.png" alt="All Online Logo" class="w-32 h-auto mb-4">
-                    <h4 class="text-xl font-semibold text-gray-800 mb-2">All Online</h4>
-                    <p class="text-gray-500 text-center text-sm">สินค้าคุณภาพดีจากร้านค้าในเครือข่าย</p>
-                    <a href="https://atth.me/000bp8000aj2" target="_blank" class="mt-4 bg-lime-500 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-lime-600 transition-colors duration-200">
-                        ช้อปเลย
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/nh63nS3D/13.avif" alt="ครีมรองพื้น" class="w-full h-auto object-cover rounded-lg mb-4">
                     </a>
+                    <h3 class="text-base font-semibold mb-1">【1 แถม 1】ครีมรองพื้น</h3>
+                    <p class="text-gray-500 text-xs mb-2">ดีล 3 วัน 15-17 กย.68</p>
+                    <p class="text-gray-700 text-sm mb-2">ผิวเนียนติดทนนานตลอดวัน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿59.00</span>
+                        <span class="original-price">฿236.00</span>
+                        <span class="discount">-75%</span>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/kgtyYF7X/14.avif" alt="วาสลีนโลชั่น" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">วาสลีนเฮลธี ไบรท์</h3>
+                    <p class="text-gray-500 text-xs mb-2">เฟรชแอนด์ไบรท์ คูลลิ่งโลชั่น 500มล.</p>
+                    <p class="text-gray-700 text-sm mb-2">โลชั่นผิวใสเย็นสบาย</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿78.00</span>
+                        <span class="original-price">฿195.00</span>
+                        <span class="discount">-60%</span>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/4ySzBnM9/15-15-c-lazada.avif" alt="Xiaomi Redmi 15C" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Xiaomi Redmi 15C 8/256Gb</h3>
+                    <p class="text-gray-500 text-xs mb-2">ลาซมอลล์สั่งซื้อล่วงหน้า</p>
+                    <p class="text-gray-700 text-sm mb-2">สมาร์ทโฟนรุ่นใหม่</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿3,999.00</span>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/T3mrJdcK/16-poco-lazada.avif" alt="POCO X7 Pro" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">POCO X7 Pro Rom</h3>
+                    <p class="text-gray-500 text-xs mb-2">ใหม่ไร้พลัง</p>
+                    <p class="text-gray-700 text-sm mb-2">กล้องหลัก 50MP กันสั่น KKK</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿10,771.18</span>
+                        <span class="original-price">฿10,991.00</span>
+                        <span class="discount">-2%</span>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/mDdMgtT5/17.avif" alt="Xiaomi Redmi Note 15 Pro" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Xiaomi Redmi Note 15 Pro</h3>
+                    <p class="text-gray-500 text-xs mb-2">รอมจีน 5g โทรศัพท์</p>
+                    <p class="text-gray-700 text-sm mb-2">ดีล 3 วัน 15-17 กย.68</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿9,200.00</span>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/Z5kNnkh4/18.avif" alt="รองเท้าผ้าใบแฟชั่น" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">รองเท้าผ้าใบแฟชั่น</h3>
+                    <p class="text-gray-500 text-xs mb-2">ดีเทลสวย สีสวย คุมโทนวัยรุ่น</p>
+                    <p class="text-gray-700 text-sm mb-2">ใส่ทำงานได้</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿169.00</span>
+                        <span class="original-price">฿325.00</span>
+                        <span class="discount">-48%</span>
+                    </div>
+                </div>
+                <!-- Product Card 9 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/T3rDWkRm/19-120.avif" alt="แคปซูลเอสเซนส์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">แคปซูลเอสเซนส์บำรุงผิวหน้า 120 ชิ้น</h3>
+                    <p class="text-gray-500 text-xs mb-2">โปรโมชั่นซื้อ 1 แถม 3 ฟรี</p>
+                    <p class="text-gray-700 text-sm mb-2">บรรจุภัณฑ์ใหม่และเก่า</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿113.50</span>
+                        <span class="original-price">฿200.00</span>
+                        <span class="discount">-43%</span>
+                    </div>
+                </div>
+                <!-- Product Card 10 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/gcQXt9j8/20-product3-png.png" alt="เสื้อธงชาติไทย" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เสื้อธงชาติไทย</h3>
+                    <p class="text-gray-500 text-xs mb-2">เสื้อยืดลายธงชาติ</p>
+                    <p class="text-gray-700 text-sm mb-2">สวมใส่สบาย</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 11 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/yxFqMVkp/4-K-UHD-Android-2-899.avif" alt="สมาร์ททีวี 4K" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">สมาร์ททีวี 4K UHD Android 12.0</h3>
+                    <p class="text-gray-500 text-xs mb-2">รับประกัน 1 ปี</p>
+                    <p class="text-gray-700 text-sm mb-2">ทีวีจอแบน Google & Netflix & Youtube</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿2,899</span>
+                    </div>
+                </div>
+                <!-- Product Card 12 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/5N1DHWH1/5-Dewalt-88v-950n-m-2.avif" alt="บล็อกไฟฟ้า" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ประแจไฟฟ้า Dewalt 88v</h3>
+                    <p class="text-gray-500 text-xs mb-2">รับประกัน 5 ปี</p>
+                    <p class="text-gray-700 text-sm mb-2">บล็อกไฟฟ้า ประแจกระแทก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿1,059</span>
+                    </div>
+                </div>
+                <!-- Product Card 13 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/L5TqHFWv/EAANSP-32-4-K-Full-HD-LED-Android-Netfli.avif" alt="EAANSP ทีวีอัจฉริยะ" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">EAANSP ทีวีอัจฉริยะ 32 นิ้ว</h3>
+                    <p class="text-gray-500 text-xs mb-2">รับประกัน 2 ปี</p>
+                    <p class="text-gray-700 text-sm mb-2">LED Android 4K Full HD</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿4,299</span>
+                    </div>
+                </div>
+                <!-- Product Card 14 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/5N4YsjHr/2-6-8.avif" alt="เครื่องทำน้ำแข็งอัตโนมัติ" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เครื่องทำน้ำแข็งอัตโนมัติ 2 ลิตร</h3>
+                    <p class="text-gray-500 text-xs mb-2">ทำน้ำแข็งได้ใน 6-8 นาที</p>
+                    <p class="text-gray-700 text-sm mb-2">เครื่องทำน้ำแข็งขนาดเล็ก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿1,799</span>
+                    </div>
+                </div>
+                <!-- Product Card 15 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00a6xe000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/wjP1xVWK/HAFELE-7.avif" alt="เครื่องฟอกอากาศ HAFELE" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เครื่องฟอกอากาศ HAFELE</h3>
+                    <p class="text-gray-500 text-xs mb-2">กรอง 7 ขั้นตอน</p>
+                    <p class="text-gray-700 text-sm mb-2">ป้องกันมลภาวะ PM 2.5</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">฿2,990</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- New Section for Top Deals -->
-        <section>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
-                ดีลแนะนำวันนี้
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-lg p-4 container-shadow overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <div class="slider-container aspect-square">
-                        <div class="slider">
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/KYRrG9WY/product1-png.png" alt="Product 1" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/pTNHkSbh/promo1-png.png" alt="Promo 1" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">เครื่องใช้ไฟฟ้าลดสูงสุด 50%</h4>
-                        <p class="text-gray-500 text-sm mb-4">ดีลพิเศษเฉพาะวันนี้เท่านั้น! จากร้านค้าชั้นนำที่ All Online</p>
-                        <a href="https://atth.me/000bp8000aj2" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-200">
-                            ดูรายละเอียด
-                        </a>
+        <!-- All Online Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
+                ดีลเด็ดจาก All Online
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/MHvPYn5C/11-WU-CA258-All.jpg" alt="เครื่องฟอกอากาศในรถยนต์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เครื่องฟอกอากาศในรถยนต์</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น WU-CA258</p>
+                    <p class="text-gray-700 text-sm mb-2">เพื่ออากาศที่สะอาด</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
                     </div>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="bg-white rounded-lg p-4 container-shadow overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <div class="slider-container aspect-square">
-                        <div class="slider">
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/MHkhbfBy/product2-png.png" alt="Product 2" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/CL4x5wyv/promo2-png.png" alt="Promo 2" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">อุปกรณ์ไอทีและแกดเจ็ต</h4>
-                        <p class="text-gray-500 text-sm mb-4">ลดราคาครั้งยิ่งใหญ่สำหรับคนรักเทคโนโลยี</p>
-                        <a href="https://atth.me/0041fn000aj2" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-200">
-                            ดูรายละเอียด
-                        </a>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/qqSmDpZz/12-ERGONOMIC-BM-192-All.jpg" alt="เม้าส์ไร้สาย" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เม้าส์ไร้สายเพื่อสุขภาพ</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น ERGONOMIC BM-192</p>
+                    <p class="text-gray-700 text-sm mb-2">ดีไซน์เพื่อการใช้งานที่สบาย</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
                     </div>
                 </div>
-
-                <!-- Product 3 -->
-                <div class="bg-white rounded-lg p-4 container-shadow overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <div class="slider-container aspect-square">
-                        <div class="slider">
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/RZ0btLYk/product3-png.png" alt="Product 3" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                            <div class="slide">
-                                <img src="https://i.postimg.cc/L6Q3cKyW/promo3-png.png" alt="Promo 3" class="rounded-lg object-cover w-full h-full">
-                            </div>
-                        </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/XYMHw7CP/13-Samsung-Galaxy-Tab-S10-Lite-5-G-Ram-All.jpg" alt="Samsung Galaxy Tab S10 Lite" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Samsung Galaxy Tab S10 Lite 5G</h3>
+                    <p class="text-gray-500 text-xs mb-2">แท็บเล็ตประสิทธิภาพสูง</p>
+                    <p class="text-gray-700 text-sm mb-2">ตอบโจทย์ทุกการใช้งาน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
                     </div>
-                    <div class="p-4 text-center">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">แฟชั่นและบิวตี้คอลเลกชันใหม่</h4>
-                        <p class="text-gray-500 text-sm mb-4">แต่งตัวสวยก่อนใครด้วยดีลสุดพิเศษ</p>
-                        <a href="https://atth.me/00bgpi000aj2" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-200">
-                            ดูรายละเอียด
-                        </a>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/sgpnKdPg/14-STARROS-CP-513-All.jpg" alt="ที่รองโน๊ตบุ๊ค" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ที่รองโน๊ตบุ๊คระบายความร้อน</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น STARROS CP-513</p>
+                    <p class="text-gray-700 text-sm mb-2">ช่วยยืดอายุการใช้งาน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/jjtMFgvQ/15-Xiaomi-Redmi-15-C-4-G-Ram-6-Gb-All.jpg" alt="Xiaomi Redmi 15C" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Xiaomi Redmi 15C 4G</h3>
+                    <p class="text-gray-500 text-xs mb-2">Ram 6 Gb</p>
+                    <p class="text-gray-700 text-sm mb-2">สมาร์ทโฟนราคาย่อมเยา</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/nL2RyXFP/25-SAMSUNG-TV-43-UA43-U8000-FKXXT-All.jpg" alt="SAMSUNG TV 43 นิ้ว" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">SAMSUNG TV 43 นิ้ว</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น UA43U8000FKXXT</p>
+                    <p class="text-gray-700 text-sm mb-2">ทีวีความคมชัดสูง</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/pVh38SSp/17-Headphone-A-K15-V-all.jpg" alt="Headphone" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Headphone รุ่น A-K15V</h3>
+                    <p class="text-gray-500 text-xs mb-2">หูฟังคุณภาพดี</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับคนรักเสียงเพลง</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/ZKzsN53M/18-AK-MS48-All.jpg" alt="ที่จับมือถือมอไซต์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ที่จับมือถือมอไซต์</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น AK-MS48</p>
+                    <p class="text-gray-700 text-sm mb-2">สะดวกและปลอดภัย</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 9 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/qqsLw2nZ/19-IP-Camera-G1-A-All.jpg" alt="กล้องวงจรปิด" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">กล้องวงจรปิด IP Camera</h3>
+                    <p class="text-gray-500 text-xs mb-2">รุ่น G1A</p>
+                    <p class="text-gray-700 text-sm mb-2">เพื่อความปลอดภัยในบ้าน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 10 -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/MGgm89mF/20-4205-PLUS-All.jpg" alt="ลำโพงบลูทูธ" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ลำโพงบลูทูธ 4205 PLUS</h3>
+                    <p class="text-gray-500 text-xs mb-2">เสียงดี พกพาสะดวก</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับทุกปาร์ตี้</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 11 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/yxKYGpLK/21-All.jpg" alt="พัดลมตัวจิ๋ว" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">พัดลมตัวจิ๋ว</h3>
+                    <p class="text-gray-500 text-xs mb-2">All Online</p>
+                    <p class="text-gray-700 text-sm mb-2">พัดลมขนาดเล็ก พกพาสะดวก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 12 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/T2jPbGP3/22-X-868-All.jpg" alt="ลำโพงบลูทูธ X-868" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ลำโพงบลูทูธ X-868</h3>
+                    <p class="text-gray-500 text-xs mb-2">All Online</p>
+                    <p class="text-gray-700 text-sm mb-2">เสียงดี คุณภาพเยี่ยม</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 13 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/NGyP5fGW/23-HEPA-All.jpg" alt="ครื่องฟอกอากาศในรถยนต์ HEPA" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เครื่องฟอกอากาศในรถยนต์ HEPA</h3>
+                    <p class="text-gray-500 text-xs mb-2">เพื่ออากาศที่สะอาดบริสุทธิ์</p>
+                    <p class="text-gray-700 text-sm mb-2">เทคโนโลยี HEPA</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 14 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/GphXrbSg/24-Samsung-2-8-3-Q-All.jpg" alt="Samsung ตู้เย็น" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">Samsung ตู้เย็น 2 ประตู 8.3 Q</h3>
+                    <p class="text-gray-500 text-xs mb-2">เก็บความสดได้นาน</p>
+                    <p class="text-gray-700 text-sm mb-2">ประหยัดพลังงาน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 15 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/00cwjg000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/CxwNHFYM/26-SM-BBQ2000-allon.jpg" alt="เตาปิ้งย่างไฟฟ้า" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เตาปิ้งย่างไฟฟ้า รุ่น SM-BBQ2000</h3>
+                    <p class="text-gray-500 text-xs mb-2">ทำความสะอาดง่าย</p>
+                    <p class="text-gray-700 text-sm mb-2">ปิ้งย่างได้อร่อย</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Shopee Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
+                ดีลเด็ดจาก Shopee
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/WpZTjtTW/11-Led-Shop.webp" alt="หน้ากากคอสเพลย์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หน้ากากคอสเพลย์ LED</h3>
+                    <p class="text-gray-500 text-xs mb-2">เปลี่ยนหน้าได้หลายแบบ</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับปาร์ตี้ฮาโลวีน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/q7gHFv1G/12-Auto-King1-1-Iron-Man-MK5-deformable.webp" alt="หมวกกันน็อค Iron Man" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หมวก Iron Man MK5</h3>
+                    <p class="text-gray-500 text-xs mb-2">ควบคุมด้วยเสียง</p>
+                    <p class="text-gray-700 text-sm mb-2">ไฟฟ้าเปิดและปิด</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/FKqXXXqX/13-Shop.webp" alt="ขวดน้ำสร้างสรรค์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ขวดน้ำสร้างสรรค์</h3>
+                    <p class="text-gray-500 text-xs mb-2">ดีไซน์แปลกใหม่</p>
+                    <p class="text-gray-700 text-sm mb-2">อุปกรณ์ยิงสด</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/NFvhL7BN/14-mplus-360.webp" alt="ที่วางโทรศัพท์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ที่วางโทรศัพท์แบบสายรัดข้อมือ</h3>
+                    <p class="text-gray-500 text-xs mb-2">หมุนได้ 360°</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับวิ่ง ขี่จักรยาน</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/8kLQ93mx/15-Android-YG300.webp" alt="โปรเจ็กเตอร์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">โปรเจ็กเตอร์ Android YG300</h3>
+                    <p class="text-gray-500 text-xs mb-2">รองรับมือถือและแล็ปท็อป</p>
+                    <p class="text-gray-700 text-sm mb-2">โปรเจคเตอร์ขนาดเล็ก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/P53B1kdv/16-iron-man-helmet.webp" alt="iron man helmet" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">iron man helmet</h3>
+                    <p class="text-gray-500 text-xs mb-2">สั่งด้วยเสียง</p>
+                    <p class="text-gray-700 text-sm mb-2">มีรีโมท มีระบบสัมผัส</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/9M3gBmK0/17-Toker-New.webp" alt="สร้อยข้อมือป้องกันไฟฟ้าสถิตย์" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">สร้อยข้อมือซิลิโคน</h3>
+                    <p class="text-gray-500 text-xs mb-2">ป้องกันไฟฟ้าสถิตย์</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับผู้ชายและผู้หญิง</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/BQwggZ13/18-Iron-Man-MK5-cos.webp" alt="หมวกกันน็อค Iron Man MK5" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หมวกกันน็อค Iron Man MK5</h3>
+                    <p class="text-gray-500 text-xs mb-2">สำหรับเด็กและผู้ใหญ่</p>
+                    <p class="text-gray-700 text-sm mb-2">เปิด-ปิดแบบเต็มหน้า</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 9 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/FHykscJD/19-LED.webp" alt="ชุดไฟ LED" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ชุดไฟ LED ติดหมวกกันน็อค</h3>
+                    <p class="text-gray-500 text-xs mb-2">กันน้ำ</p>
+                    <p class="text-gray-700 text-sm mb-2">สำหรับรถจักรยานยนต์</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 10 -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/SsT2hR4N/20-Shop.webp" alt="หมวกกันน็อคหัวกะโหลก" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หมวกกันน็อคหัวกะโหลก</h3>
+                    <p class="text-gray-500 text-xs mb-2">พร้อมแว่นกันแดด</p>
+                    <p class="text-gray-700 text-sm mb-2">คอสเพลย์แฟนซี</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 11 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/h4XbGW53/21-Kiprun-3-D.webp" alt="หน้ากากปิดตา" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หน้ากากปิดตานอนหลับ 3D</h3>
+                    <p class="text-gray-500 text-xs mb-2">Kiprun</p>
+                    <p class="text-gray-700 text-sm mb-2">หูฟังเอียร์บัดเพลงไร้สายบลูทูธ</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 12 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/sXqWWxNH/22-999990000-W-1-Laser-pointer-303-6.webp" alt="เลเซอร์ไล่นก" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">เลเซอร์ไล่นก</h3>
+                    <p class="text-gray-500 text-xs mb-2">Laser pointer 303</p>
+                    <p class="text-gray-700 text-sm mb-2">เลเซอร์แสงเขียวแรงสูง</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 13 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/Vs0n89Jx/23-LED-2000m-Ah-Face-Transforming-LED-Gesture-Sensing-App-Light-UP.webp" alt="หน้ากาก LED" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">หน้ากาก LED 2000mAh</h3>
+                    <p class="text-gray-500 text-xs mb-2">พร้อม Gesture Sensing</p>
+                    <p class="text-gray-700 text-sm mb-2">ควบคุม Light UP หน้ากาก</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 14 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/VkmCn3Kw/24-TCY-3-Shop.webp" alt="ลูกดอก ปืนดำน้ำ" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">ลูกดอก ปืนดำน้ำ</h3>
+                    <p class="text-gray-500 text-xs mb-2">ขนาด 3 มิล</p>
+                    <p class="text-gray-700 text-sm mb-2">ทำจากเหล็ก TCY</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+                <!-- Product Card 15 (NEW) -->
+                <div class="product-card">
+                    <a href="https://atth.me/0041fn000aj2" target="_blank">
+                        <img src="https://i.postimg.cc/K8fgNJWM/25.webp" alt="อุปกรณ์ตกปลา" class="w-full h-auto object-cover rounded-lg mb-4">
+                    </a>
+                    <h3 class="text-base font-semibold mb-1">อุปกรณ์ตกปลา ปืนยิงปลา</h3>
+                    <p class="text-gray-500 text-xs mb-2">ความแม่นยำสูง</p>
+                    <p class="text-gray-700 text-sm mb-2">ชุดกระเพาะปลาที่มีประสิทธิภาพ</p>
+                    <div class="flex flex-col items-start mt-auto">
+                        <span class="price">ราคาพิเศษ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
-    <!-- Footer Section -->
-    <footer class="w-full bg-white container-shadow mt-auto pt-8 pb-4 text-center rounded-t-3xl">
-        <p class="text-sm text-gray-500">
-            Powered by Shoponline | รวมดีลดีๆ ที่ทำให้คุณประหยัด
-        </p>
-    </footer>
 
-    <!-- JavaScript for Auto-Sliding and User Interaction -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sliders = document.querySelectorAll('.slider-container');
-            
-            sliders.forEach(container => {
-                const slider = container.querySelector('.slider');
-                let slideIndex = 0;
-                let interval;
-
-                const startSlide = () => {
-                    interval = setInterval(() => {
-                        slideIndex++;
-                        if (slideIndex >= slider.children.length) {
-                            slideIndex = 0;
-                        }
-                        slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-                    }, 4000); // Changed to 4 seconds for a more professional feel
-                };
-
-                const stopSlide = () => {
-                    clearInterval(interval);
-                };
-
-                startSlide();
-                
-                // Pause on hover
-                container.addEventListener('mouseenter', stopSlide);
-                container.addEventListener('mouseleave', startSlide);
-            });
-        });
-    </script>
 </body>
 </html>
